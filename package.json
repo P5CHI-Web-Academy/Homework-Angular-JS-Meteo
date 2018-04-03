@@ -1,0 +1,34 @@
+{
+  "name": "homework-angular-js-meteo",
+  "version": "1.0.0",
+  "description": "** Final homework for JS course ... Yaaay !!! Create a NodeJS application that will notify a list of email receivers about next day meteo. - The application needs to be started as server (you can use **express** for that) - At a regular interval of time, a request to a public meteo api will be done that will get meteo data for a city (Chișinău for example) - If a receiver email didn't received an email with next day meteo data, an email with needed information will be sent - Data, as the email list, needs to be included in a **config.json** file that will save data between sessions",
+  "main": "index.js",
+  "scripts": {
+    "server": "./node_modules/babel-cli/bin/babel-node.js ./src/server.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P5CHI-Web-Academy/Homework-Angular-JS-Meteo.git"
+  },
+  "author": "Topala Mihai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/P5CHI-Web-Academy/Homework-Angular-JS-Meteo/issues"
+  },
+  "homepage": "https://github.com/P5CHI-Web-Academy/Homework-Angular-JS-Meteo#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chokidar": "^2.0.3",
+    "colors": "^1.2.1",
+    "cron": "^1.3.0",
+    "express": "^4.16.3",
+    "node-cron": "^1.2.1",
+    "node-sass": "^4.8.3",
+    "nodemailer": "^4.6.4"
+  }
+}
