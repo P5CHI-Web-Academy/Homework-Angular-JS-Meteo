@@ -35,9 +35,9 @@ exports.sendMessage = (email, wheater, sends) => {
         if(!emailSents.includes(i)) {
 
             let mailOptions = {
-                from: '"Mihai Topala" <undefined.username@gmail.com>', 
+                from: '"Enter your name" <enter your existing email', 
                 to: i,
-                subject: 'Wheater in Chisinau',
+                subject: 'Wheater in Moldova/Chisinau',
                 text: JSON.stringify(wheater)
             };
 
