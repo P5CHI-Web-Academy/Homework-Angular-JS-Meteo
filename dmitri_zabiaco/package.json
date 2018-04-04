@@ -1,0 +1,20 @@
+{
+  "name": "weather_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.0",
+    "node-cron": "^1.2.1",
+    "nodemailer": "^4.6.4",
+    "request": "^2.85.0"
+  }
+}
