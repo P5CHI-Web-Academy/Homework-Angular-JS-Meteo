@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const SendEmail = require('./SendMail/SendMail');
+const cron = require('./Cron/Cron');
 
 const app = express();
 

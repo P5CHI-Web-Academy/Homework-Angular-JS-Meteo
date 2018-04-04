@@ -1,38 +1,8 @@
 const nodemailer = require('nodemailer');
-const wheater = require('../WheaterAPI/api');
-const emails = require('./MailList');
-const pathToSend  = '/home/mihai/Documents/GitHub/Homework-Angular-JS-Meteo/config.json';
-const pathSends = '/home/mihai/Documents/GitHub/Homework-Angular-JS-Meteo/src/EmailSends/emails.json';
+const emails = require('../SendMail/MailList');
+const pathSends = '/home/mihai/Documents/Homework-Angular-JS-Meteo/src/EmailSends/emails.json';
 
-const isEmpty = obj =>  {
-    return Object.keys(obj).length === 0;
-}
-
-emails.readFile(pathToSend)
-    .then(email => { 
-        (!isEmpty(email)) ? console.log('Succes') : console.log('Email list is empty');
-           wheater()
-                .then(wheater => {
-                    if(!isEmpty(wheater))
-                    emails.readSendEmails(pathSends)
-                         .then(sends => {
-                               return sendMessage(email, wheater, sends); 
-                         })
-                         .catch(err => {
-                               console.log(err);
-                        })
-                        
-                 })
-                  .catch(err => {
-                       console.log(err);
-                  })
-     })
-     .catch(err => {
-        console.log(err);
-     })
-
-
-const sendMessage = (email, wheater, sends) => {
+exports.sendMessage = (email, wheater, sends) => {
 
     const emailSents = []; 
     let emailsInfo = {};
@@ -44,7 +14,7 @@ const sendMessage = (email, wheater, sends) => {
             emailSents.push(i);
         }
     }
-     
+
      ((email !== '')) ? emailsInfo = JSON.parse(email) : emailsInfo = {};
 
     
@@ -54,8 +24,8 @@ const sendMessage = (email, wheater, sends) => {
             secure: false,
             port: 2525,
             auth: {
-                user: 'undefiened.username@gmail.com',
-                pass: 'test7777' 
+                user: 'enter your gmail',
+                pass: 'enter your password' 
             }
     });
     
@@ -95,4 +65,3 @@ const sendMessage = (email, wheater, sends) => {
     }
 
 }
-  
