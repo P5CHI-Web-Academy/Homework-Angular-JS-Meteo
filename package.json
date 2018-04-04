@@ -1,0 +1,23 @@
+{
+  "name": "Meteo",
+  "version": "1.0.0",
+  "description": "Sends emails with meteo",
+  "main": "index.js",
+  "scripts": {
+    "server": "./node_modules/babel-cli/bin/babel-node.js ./src/server.js --presets latest",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+  },
+  "author": "Andrei Portas",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "chokidar": "2.0.2",
+    "colors": "1.2.1"
+  },
+}
