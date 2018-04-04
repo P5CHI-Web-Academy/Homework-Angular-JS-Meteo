@@ -24,8 +24,8 @@ exports.sendMessage = (email, wheater, sends) => {
             secure: false,
             port: 2525,
             auth: {
-                user: 'enter your gmail',
-                pass: 'enter your password' 
+                user: 'enter your existing gmail',
+                pass: 'enter your existing password' 
             }
     });
     
